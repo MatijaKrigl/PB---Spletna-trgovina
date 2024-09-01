@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Iskanje Oblačil</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Domov</a>
+            <!-- Preverimo, ali je `session` definiran -->
+            <a href="/kosarica">Košarica ({{session.get('cart_count', 0) if session else 0}})</a>
+            % if user:
+                <a href="/logout">Odjava</a>
+            % else:
+                <a href="/login">Prijava</a>
+                <a href="/register">Registracija</a>
+            % end
+        </nav>
+    </header>
+    <main>
+        <h1>Poišči oblačilo po tipu in velikosti</h1>
+        <form action="/iskanje_oblacila" method="post">
+            <label for="tip">Tip:</label>
+            <input type="text" name="tip" required><br>
+            <label for="velikost">Velikost:</label>
+            <input type="text" name="velikost"><br>
+            <button type="submit">Išči</button>
+        </form>
+    </main>
+</body>
+</html>

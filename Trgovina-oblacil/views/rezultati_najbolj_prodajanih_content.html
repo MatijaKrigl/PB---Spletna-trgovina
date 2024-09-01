@@ -1,0 +1,24 @@
+<!-- <ul>
+    % for oblacilo in oblacila:
+        <li>Tip: {{oblacilo[0]}}, Velikost: {{oblacilo[1]}}, Barva: {{oblacilo[2]}}, Znamka: {{oblacilo[3]}}, Material: {{oblacilo[4]}}, Cena: {{'{:.2f}'.format(oblacilo[5])}}, Sezona: {{oblacilo[6]}}, ID: {{oblacilo[7]}}, Prodano: {{oblacilo[8]}}</li>
+    % end
+    </ul> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Najbolj prodajana oblačila</title>
+</head>
+<body>
+    <h1>Najbolj prodajana oblačila</h1>
+    <ul>
+    % for oblacilo in oblacila:
+        <li><a href="/izdelek/{{oblacilo[7]}}"> {{oblacilo[2]}} {{oblacilo[3]}} {{oblacilo[0]}}, {{oblacilo[1]}}, Cena: {{oblacilo[5]}}EUR</a></li>
+    % end
+    </ul>
+</body>
+</html>
+    
+    

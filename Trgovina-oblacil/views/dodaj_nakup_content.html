@@ -1,0 +1,14 @@
+% if napaka:
+    <p style="color: red;">{{napaka}}</p>
+% end
+<form action="/dodaj_nakup" method="post">
+    <label for="id_izdelka">ID izdelka:</label>
+    <input type="text" id="id_izdelka" name="id_izdelka" required><br>
+    <label for="cena">Cena:</label>
+    <input type="text" id="cena" name="cena" required><br>
+    <label for="kolicina">Količina:</label>
+    <input type="text" id="kolicina" name="kolicina" required><br>
+    <label for="datum">Datum (YYYY-MM-DD):</label>
+    <input type="text" id="datum" name="datum" required><br>
+    <button type="submit">Dodaj</button>
+</form>

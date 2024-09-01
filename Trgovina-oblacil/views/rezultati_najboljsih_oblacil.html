@@ -1,0 +1,37 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Najboljša oblačila v sezoni</title>
+</head>
+<body>
+    <h1>Najboljša oblačila v sezoni</h1>
+    % if oblacila:
+        <ul>
+        % for oblacilo in oblacila:
+            <li>Tip: {{oblacilo[0]}}, Velikost: {{oblacilo[1]}}, Barva: {{oblacilo[2]}}, Znamka: {{oblacilo[3]}}, Material: {{oblacilo[4]}}, Cena: {{oblacilo[5]}}, Sezona: {{oblacilo[6]}}, ID: {{oblacilo[7]}}</li>
+        % end
+        </ul>
+    % else:
+        <p>Ni najdenih oblačil za to sezono.</p>
+    % end
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Najboljša oblačila v sezoni</title>
+</head>
+<body>
+    <h1>Najboljša oblačila v sezoni</h1>
+    <ul>
+    % for oblacilo in oblacila:
+        <li><a href="/izdelek/{{oblacilo[7]}}">{{oblacilo[2]}} {{oblacilo[3]}} {{oblacilo[0]}}, {{oblacilo[1]}}, Cena: {{oblacilo[5]}}EUR</a></li>
+    % end
+    </ul>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles/body.css">
+</head>
+<body>
+    <h1>{{izdelek.tip}} - {{izdelek.znamka}}</h1>
+    <p>Velikost: {{izdelek.velikost}}</p>
+    <p>Barva: {{izdelek.barva}}</p>
+    <p>Material: {{izdelek.material}}</p>
+    <p>Cena: {{izdelek.cena}} EUR</p>
+    <p>Sezona: {{izdelek.sezona}}</p>
+    <p>Spol: {{izdelek.spol}}</p>
+
+    <!-- Forma za dodajanje v košarico -->
+    <form action="/dodaj_v_kosarico" method="post">
+        <input type="hidden" name="product_id" value="{{izdelek.id}}">
+        <button type="submit">Dodaj v košarico</button>
+    </form>
+
+    <!-- Forma za potrjevanje nakupa -->
+    <form action="/potrdi_nakup" method="post">
+        <button type="submit">Potrdi nakup</button>
+    </form>
+
+    <a href="/" class="home-link">Domov</a>
+</body>
+</html>

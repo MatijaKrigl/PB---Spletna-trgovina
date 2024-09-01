@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registracija</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Domov</a>
+            <a href="/kosarica">Košarica ({{session.get('cart_count', 0)}})</a>
+            <a href="/login">Prijava</a>
+            <a href="/register">Registracija</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Registracija</h1>
+        % if napaka:
+            <p style="color: red;">{{napaka}}</p>
+        % end
+        <form action="/register" method="post">
+            <label for="first_name">Ime:</label>
+            <input type="text" name="first_name" required><br>
+            <label for="last_name">Priimek:</label>
+            <input type="text" name="last_name" required><br>
+            <label for="age">Starost:</label>
+            <input type="number" name="age" required><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" required><br>
+            <label for="password">Geslo:</label>
+            <input type="password" name="password" required><br>
+            <label for="gender">Spol:</label>
+            <select name="gender">
+                <option value="M">Moški</option>
+                <option value="F">Ženska</option>
+            </select><br>
+            <label for="region">Regija:</label>
+            <input type="text" name="region" required><br>
+            <button type="submit">Registriraj se</button>
+        </form>
+    </main>
+</body>
+</html>

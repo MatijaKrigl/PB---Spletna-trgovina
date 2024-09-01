@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/styles/body.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="active">Domov</a>
+            <a href="/iskanje_oblacila">Iskanje oblačil</a>
+            <a href="/najboljsa_oblacila">Najboljša oblačila</a>
+            <a href="/najbolj_prodajana">Najbolj prodajana</a>
+            <a href="/novo_v_zalogi">Novo v zalogi</a>
+            <a href="/login">Prijava</a>
+            <a href="/register">Registracija</a>
+            <a href="/kosarica">Košarica ({{ session.get('cart_count', 0) }})</a>
+        </nav>
+    </header>
+
+    <main>
+        {{!content}}
+    </main>
+</body>
+</html>

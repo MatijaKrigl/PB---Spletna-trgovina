@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trgovina z Oblačili</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles/body.css">
+</head>
+<body>
+    <h1>Dobrodošli v spletni trgovini Obešalnik!</h1>
+    <div style="text-align: center;">
+        <form action="/iskanje_oblacila" method="post" style="margin-bottom: 20px;">
+            <input type="text" name="tip" placeholder="Vnesite tip oblačila" required>
+            <button type="submit">Poišči</button>
+        </form>
+        <div style="margin-bottom: 20px;">
+            <a href="/iskanje_po_spolu?spol=Women" class="large-button">Women</a>
+            <a href="/iskanje_po_spolu?spol=Men" class="large-button">Men</a>
+            <a href="/iskanje_po_spolu?spol=Children" class="large-button">Children</a>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <a href="/novo_v_zalogi" class="large-button">
+                <img src="/static/slike/novoVzalogi.png" alt="New Arrivals">
+            </a>
+        </div>
+        <div style="margin-bottom: 20px;">
+            <a href="/najbolj_prodajana" class="large-button">
+                <img src="/static/slike/najboljPriljubljena.png" alt="Best Sellers">
+            </a>
+        </div>
+        <div>
+            <a href="/login" class="large-button">Admin Login</a>
+        </div>
+    </div>
+</body>
+</html>

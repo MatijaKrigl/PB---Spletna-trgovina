@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Uspešno</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Domov</a>
+            <a href="/kosarica">Košarica ({{session.get('cart_count', 0)}})</a>
+            % if user:
+                <a href="/logout">Odjava</a>
+            % else:
+                <a href="/login">Prijava</a>
+                <a href="/register">Registracija</a>
+            % end
+        </nav>
+    </header>
+    <main>
+        <h1>{{sporocilo}}</h1>
+    </main>
+</body>
+</html>
